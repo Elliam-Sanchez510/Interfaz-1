@@ -10,10 +10,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <MaterialCommunityIcons
-          style={styles.BotonRetroceder}
-          name='arrow-left'
-        />
+
         <View style={styles.IconsHeader}>
           <MaterialCommunityIcons
             style={styles.Icons}
@@ -26,6 +23,10 @@ export default function App() {
           <Ionicons
             style={styles.Icons}
             name='md-reorder-three-outline'
+          />
+          <MaterialCommunityIcons
+            style={styles.BotonRetroceder}
+            name='arrow-left'
           />
         </View>
 
@@ -124,26 +125,28 @@ export default function App() {
             </Text>
             <View style={styles.line}>
             </View>
+          </View>
 
-            <View style={styles.people}>
-              <MaterialCommunityIcons
-                style={styles.PeopleComent}
-                name='account-circle-outline'
-              />
-              <Text style={styles.NomComent}>Michael Ganri . 20 Apr.2021</Text>
-            </View>
-            
-            <View style={styles.Comentarios}>
-              <Text style={styles.Comentarios}>
-                Lorem ipsum dolor sit, amet adipisicing elit.
-                Nihil provident distinctio aut. Inventore,
-                Lorem ipsum dolor sit, amet adipisicing elit.
-              </Text>
-              <View style={styles.line}>
-              </View>
+          <View style={styles.people}>
+
+            <MaterialCommunityIcons
+              style={styles.PeopleComent}
+              name='account-circle-outline'
+            />
+            <Text style={styles.NomComent}>David Green . 20 Apr.2021</Text>
+          </View>
+          <View style={styles.Comentarios}>
+            <Text style={styles.Comentarios}>
+              😊😉Lorem ipsum dolor sit, amet adipisicing elit.
+              Nihil provident distinctio aut. Inventore.
+              provident distinctio aut. Inventore
+              Nihil provident distinctio aut. Inventore.
+            </Text>
+            <View style={styles.line}>
             </View>
           </View>
         </View>
+
         <View style={styles.FinalIcons}>
           <MaterialCommunityIcons name="home"
             style={styles.Footer}
@@ -161,6 +164,7 @@ export default function App() {
             style={styles.Footer}
           />
         </View>
+
       </ScrollView>
     </View>
   );
@@ -173,21 +177,21 @@ const styles = StyleSheet.create({
   },
   Header: {
     backgroundColor: '#2F3C50',
-    marginTop: 20,
     borderTopRightRadius: 22,
     borderTopLeftRadius: 22,
   },
   BotonRetroceder: {
     fontSize: 30,
     color: '#E6E6E6',
-    padding: 10
+    position: 'absolute',
+    padding: 25
   },
   IconsHeader: {
     flexDirection: 'row',
     backgroundColor: '#28333F',
     justifyContent: 'space-between',
     paddingLeft: '55%',
-    padding: 15
+    padding: 25,
   },
   Contact: {
     color: '#6880FF',
@@ -251,7 +255,6 @@ const styles = StyleSheet.create({
     paddingStart: 20,
     color: '#fff',
     textAlign: 'center',
-    margin: 5
   },
   people: {
     flexDirection: 'row',
@@ -260,6 +263,7 @@ const styles = StyleSheet.create({
   line: {
     borderBottomWidth: 1,
     borderBottomColor: '#fff',
+    padding: 3
   },
   Footer: {
     fontSize: 30,
